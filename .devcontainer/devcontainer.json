@@ -1,0 +1,12 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+    "name": "infra-dev-container",
+    "features": {
+        "ghcr.io/devcontainers/features/kubectl-helm-minikube:1": {},
+        "ghcr.io/devcontainers/features/python:1": {},
+        "ghcr.io/devcontainers-extra/features/pipx-package:1": {},
+        "ghcr.io/dhoeric/features/k9s:1": {},
+        "ghcr.io/devcontainers-extra/features/ansible:2": {},
+        "ghcr.io/devcontainers-extra/features/apt-packages:1": {}
+    }
+}
