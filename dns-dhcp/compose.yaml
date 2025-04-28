@@ -1,0 +1,25 @@
+services:
+  dnsmasq:
+    # https://github.com/jpillora/webproc/blob/master/README.md
+    # https://github.com/jpillora/docker-dnsmasq/blob/master/Dockerfile
+    image: jpillora/dnsmasq
+    # override entrypoint to allow custom local config files as well
+    entrypoint: [
+        "webproc",
+        "--config",
+        "/etc/dnsmasq.conf",
+        "--config",
+        "/etc/dnsmasq-local.conf",
+        "--config",
+        "--",
+        "dnsmasq",
+        "--no-daemon"]
+    env_file:
+      - dnsmasq.env
+    ports: 
+    - 53:53/udp
+    - 68:68/udp
+    - 5380:8080
+    volumes:
+    - ./dnsmasq.conf:/etc/dnsmasq.conf
+    - ./dnsmasq.local.conf:/etc/dnsmasq.local.conf
