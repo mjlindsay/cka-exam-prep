@@ -1,6 +1,6 @@
 services:
   tftp:
-    image: mjlindsay/tftpd-hpa	
+    image: "mjlindsay/tftpd-hpa"
     volumes:
       - ./entrypoint.sh:/etc/entrypoint.sh
       - ./netboot.tar.gz:/etc/netboot.tar.gz
