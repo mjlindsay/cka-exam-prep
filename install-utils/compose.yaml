@@ -1,9 +1,6 @@
 services:
   tftp:
     image: mjlindsay/tftpd-hpa	
-    ports:
-      - 69:69/udp
-      - 35000:35000/udp
     volumes:
       - ./entrypoint.sh:/etc/entrypoint.sh
       - ./netboot.tar.gz:/etc/netboot.tar.gz
