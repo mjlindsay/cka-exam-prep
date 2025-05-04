@@ -1,0 +1,5 @@
+#!ipxe
+
+kernel debian/linux initrd=initrd.gz initrd=preseed
+initrd --name initrd.gz debian-installer/amd64/initrd.gz
+initrd --name preseed preseed.cfg

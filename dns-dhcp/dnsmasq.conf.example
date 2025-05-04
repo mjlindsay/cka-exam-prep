@@ -24,4 +24,4 @@ tftp-no-fail
 #############################################################
 # PXE Options
 #############################################################
-dhcp-boot=/debian-installer/amd64/bootnetx64.efi
+dhcp-boot=undionly.kpxe

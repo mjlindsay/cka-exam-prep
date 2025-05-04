@@ -10,5 +10,7 @@ COPY ./entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
 RUN mkdir /tftpboot
+RUN chmod -R 777 /tftpboot
+RUN chown -R nobody /tftpboot
 
 ENTRYPOINT [ "/entrypoint.sh" ]

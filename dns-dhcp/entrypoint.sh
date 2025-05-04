@@ -14,6 +14,8 @@ fi
 echo "Extracting archive to /tftpboot"
 
 TFTPBOOT_BASE_DIR="/tftpboot/"
+cp /tftpboot/debian-installer/amd64/grubx64.efi /tftpboot/grubx64.efi
+touch /tftpboot/revocations.efi
 
 tar -C $TFTPBOOT_BASE_DIR -xzf $NETBOOT_ARCHIVE
 
