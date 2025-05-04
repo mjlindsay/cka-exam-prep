@@ -8,5 +8,4 @@ services:
     volumes:
     - ./dnsmasq.conf:/etc/dnsmasq.conf
     - ./netboot.tar.gz:/etc/netboot.tar.gz
-    - ./undionly.kpxe:/tftpboot/undionly.kpxe
-    - ./preseed.cfg:/tftpboot/preseed.cfg
+    - ./preseed.cfg:/etc/preseed.cfg
