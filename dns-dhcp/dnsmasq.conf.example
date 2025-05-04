@@ -4,13 +4,15 @@
 
 # Configure DHCP Server Range & Lease Time
 # range_start, range_end, lease_time
-dhcp-range=192.168.1.100,192.168.1.249,12h
+dhcp-range=192.168.0.100,192.168.0.249,12h
 
 # Gateway
 dhcp-option=option:router,192.168.0.1
 
 # DNS Servers
 dhcp-option=option:dns-server,192.168.0.1,8.8.8.8
+
+dhcp-authoritative
 
 #############################################################
 # PXE Options
