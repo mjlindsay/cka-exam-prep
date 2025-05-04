@@ -1,5 +1,6 @@
 services:
   dnsmasq:
+    name: dnsmasq
     build: .
     cap_add:
       - NET_ADMIN
