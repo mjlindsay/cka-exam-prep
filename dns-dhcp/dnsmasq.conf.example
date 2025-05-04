@@ -15,16 +15,13 @@ dhcp-option=option:dns-server,192.168.0.1,8.8.8.8
 dhcp-authoritative
 
 #############################################################
+# TFTP Options
+#############################################################
+enable-tftp
+tftp-root=/tftpboot
+tftp-no-fail
+
+#############################################################
 # PXE Options
 #############################################################
-# Standard PC BIOS
-# dhcp-match=set:bios,60,PXEClient:Arch:00000
-# dhcp-boot=tag:bios,netboot.xyz.kpxe,,SERVER_IP_ADDRESS
-
-# 64-bit x86 EFI
-dhcp-match=set:efi64,60,PXEClient:Arch:00007
-dhcp-boot=tag:efi64,/debian-installer/amd64/bootnetx64.efi,raspberrypi,192.168.0.246
-
-# 64-bit x86 EFI (obsolete)
-dhcp-match=set:efi64-2,60,PXEClient:Arch:00009
-dhcp-boot=tag:efi64-2,/debian-installer/amd64/bootnetx64.efi,raspberrypi,192.168.0.246
+dhcp-boot=/debian-installer/amd64/bootnetx64.efi

@@ -6,3 +6,4 @@ services:
     network_mode: host
     volumes:
     - ./dnsmasq.conf:/etc/dnsmasq.conf
+    - ./netboot.tar.gz:/etc/netboot.tar.gz

@@ -6,4 +6,9 @@ RUN apt install -y dnsmasq
 EXPOSE 53/udp
 EXPOSE 68/udp
 
-CMD ["dnsmasq", "--no-daemon"]
+COPY ./entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+RUN mkdir /tftpboot
+
+ENTRYPOINT [ "/entrypoint.sh" ]

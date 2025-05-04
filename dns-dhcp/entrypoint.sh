@@ -17,4 +17,4 @@ TFTPBOOT_BASE_DIR="/tftpboot/"
 
 tar -C $TFTPBOOT_BASE_DIR -xzf $NETBOOT_ARCHIVE
 
-/usr/sbin/in.tftpd --foreground --secure --address=0.0.0.0:69 -v --verbosity 3 --create --port-range 35000:35000 /tftpboot
+dnsmasq --no-daemon
