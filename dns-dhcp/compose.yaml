@@ -1,6 +1,6 @@
 services:
   dnsmasq:
-    name: dnsmasq
+    container_name: dnsmasq
     build: .
     cap_add:
       - NET_ADMIN
