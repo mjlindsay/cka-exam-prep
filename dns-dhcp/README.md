@@ -29,9 +29,7 @@ reading the [Debian Installation](#debian-installation) section for more informa
 case you should consult the [iPXE](#ipxe) section of this document.
 
 ### 2. Configure dnsmasq    
-In this directory, there is a `dnsmasq.conf.example` file that contains some basic configurations for dnsmasq. You should copy this to `dnsmasq.conf`, which will not be tracked by source control. You can include special configurations for your host network here, such as providing static IP assignments or
-assigning hostnames to MAC addresses. If you do not need additional
-customizations, simply copying the file will suffice.
+See [Configuring dnsmasq](#configuring-dnsmasq). There is likely nothing you need to do other than change your boot firmware file for iPXE or add some additional network-specific configs.
 
 ### 3. Building and Running dnsmasq container
 There is a provided `Dockerfile` which builds a container running dnsmasq as
@@ -63,6 +61,13 @@ into an issue with file permissions and decided that it was not
 worth messing with. I may attempt to resolve this issue in the future.
 
 ### Configuring dnsmasq
+In this directory, there is a `dnsmasq.conf.example` file that contains some basic configurations for dnsmasq. You should copy this to `dnsmasq.conf`, which will not be tracked by source control. You can include special configurations for your host network here, such as providing static IP assignments or
+assigning hostnames to MAC addresses. If you do not need additional
+customizations, simply copying the file will suffice.
+
+Depending on what firmware you choose for iPXE, you may need to edit the
+`dhcp-boot=snponly.efi` line.
+
 dnsmasq is an old program, and its documentation is reminiscent of many
 old FOSS applications. The provided example configuration should be a
 sufficient starting point, as I built the configuration to work with
