@@ -1,4 +1,4 @@
 preseed.cfg
 netboot
 dnsmasq.conf
-./tftpboot
+tftpboot/**
