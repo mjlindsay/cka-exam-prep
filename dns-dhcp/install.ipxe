@@ -1,0 +1,6 @@
+#!ipxe
+
+kernel linux initrd=one.gz initrd=two vga=788 auto --- quiet
+initrd --name one.gz initrd.gz
+initrd --name two preseed.cfg preseed.cfg
+boot

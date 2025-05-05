@@ -14,6 +14,12 @@ dhcp-option=option:dns-server,192.168.0.1,8.8.8.8
 
 dhcp-authoritative
 
+# This command tells dnsmasq to only listen to DHCP queries
+# on the specified interface. You may not need it, but my
+# system has both a wifi and ethernet NIC, so everything
+# was duplicated.
+# interface=eth0
+
 #############################################################
 # TFTP Options
 #############################################################
@@ -24,4 +30,6 @@ tftp-no-fail
 #############################################################
 # PXE Options
 #############################################################
-dhcp-boot=undionly.kpxe
+dhcp-boot=snponly.efi
+dhcp-match=set:ipxe,175
+dhcp-boot=tag:ipxe,install.ipxe

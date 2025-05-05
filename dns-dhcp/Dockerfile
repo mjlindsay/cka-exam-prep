@@ -13,4 +13,4 @@ RUN mkdir /tftpboot
 RUN chmod -R 777 /tftpboot
 RUN chown -R nobody /tftpboot
 
-ENTRYPOINT [ "/entrypoint.sh" ]
+ENTRYPOINT [ "dnsmasq", "--no-daemon" ]
