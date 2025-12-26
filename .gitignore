@@ -6,3 +6,4 @@ downloads/
 *.crt
 *.srl
 *.csr
+*.kubeconfig
