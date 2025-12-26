@@ -1,2 +1,8 @@
 *.local*
 *.env
+workspace/
+downloads/
+*.key
+*.crt
+*.srl
+*.csr
