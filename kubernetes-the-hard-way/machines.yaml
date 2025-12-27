@@ -1,0 +1,13 @@
+nodes:
+  - name: kdev1
+    fqdn: kdev1.kubernetes.local
+    ip: 192.168.0.141
+  - name: kdev2
+    fqdn: kdev2.kubernetes.local
+    cidr: 10.200.0.0/24
+    ip: 192.168.0.142
+  - name: kdev3
+    fqdn: kdev3.kubernetes.local
+    cidr: 10.200.1.0/24
+    ip: 192.168.0.143
+

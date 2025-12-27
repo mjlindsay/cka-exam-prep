@@ -1,6 +1,6 @@
 hosts=("kdev2" "kdev3")
 
-for host in $hosts; do
+for host in "${hosts[@]}"; do
 	ssh root@${host} "mkdir -p /var/lib/{kube-proxy,kubelet}"
 	
 	scp kube-proxy.kubeconfig root@${host}:/var/lib/kube-proxy/kubeconfig

@@ -3,7 +3,7 @@
 # Generate kubeconfigs for worker nodes
 hosts=("kdev2" "kdev3")
 
-for host in $hosts; do
+for host in "${hosts[@]}"; do
 	kubectl config set-cluster kthw --certificate-authority=../certs/ca.crt --embed-certs=true \
 		--server=https://kdev1.kubernetes.local:6443 \
 		--kubeconfig=${host}.kubeconfig
@@ -16,6 +16,7 @@ for host in $hosts; do
 	
 	kubectl config set-context default \
 		--cluster=kthw \
+		--user=system:node:${host} \
 		--client-key=../certs/${host}.key \
 		--kubeconfig=${host}.kubeconfig
 

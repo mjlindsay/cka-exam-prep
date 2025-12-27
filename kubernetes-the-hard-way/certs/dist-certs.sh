@@ -1,7 +1,7 @@
 # Copy the certs to the worker machines
 hosts=("kdev2" "kdev3")
 
-for host in $hosts; do
+for host in "${hosts[@]}"; do
     ssh root@${host} mkdir /var/lib/kubelet
 
     scp ca.crt root@${host}:/var/lib/kubelet

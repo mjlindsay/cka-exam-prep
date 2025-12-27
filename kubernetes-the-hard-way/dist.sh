@@ -32,3 +32,4 @@ pushd configs/
 popd
 ./dist-etcd.sh
 ./dist-control-plane-binaries.sh
+./dist-worker-binaries.sh

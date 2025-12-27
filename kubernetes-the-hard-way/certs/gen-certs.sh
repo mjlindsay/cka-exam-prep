@@ -14,7 +14,7 @@ certs=(
   "service-accounts"
 )
 
-for i in ${certs[*]}; do
+for i in "${certs[@]}"; do
   openssl genrsa -out "${i}.key" 4096
 
   openssl req -new -key "${i}.key" -sha256 \
