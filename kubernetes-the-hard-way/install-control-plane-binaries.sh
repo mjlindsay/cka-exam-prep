@@ -24,3 +24,6 @@ systemctl start kube-apiserver kube-controller-manager kube-scheduler
 
 systemctl status kube-apiserver
 kubectl cluster-info --kubeconfig admin.kubeconfig
+
+kubectl apply -f kube-apiserver-to-kubelet.yaml \
+  --kubeconfig admin.kubeconfig
